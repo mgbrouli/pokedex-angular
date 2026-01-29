@@ -1,0 +1,98 @@
+/* Container Principal da Carta */
+.card {
+  width: 240px;
+  border: 12px solid #fbd000; /* Borda dourada clássica */
+  border-radius: 18px;
+  padding: 10px;
+  font-family: 'Verdana', sans-serif;
+  box-shadow: 8px 8px 20px rgba(0,0,0,0.4);
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+/* Cabeçalho */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  padding-bottom: 5px;
+}
+
+.name { font-weight: bold; font-size: 1.2rem; }
+.hp { color: #ff0b0b; font-weight: bold; }
+
+/* Moldura da Imagem */
+.image-container {
+  background: radial-gradient(circle, #eee 0%, #bbb 100%);
+  border: 4px solid #777;
+  margin: 10px 0;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+/* Badges de Tipo */
+.types {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.type-badge {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Stats e Habilidades */
+.stats {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.abilities {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* CORES DOS ELEMENTOS */
+.fire { background-color: #ff9d55; }
+.water { background-color: #5090d6; }
+.grass { background-color: #63bb5b; }
+.electric { background-color: #f4d23c; }
+.ice { background-color: #73cebf; }
+.fighting { background-color: #ce4069; }
+.poison { background-color: #ab6ac8; }
+.ground { background-color: #d97746; }
+.flying { background-color: #8fa8dd; }
+.psychic { background-color: #bf45f0; }
+.bug { background-color: #90c12c; }
+.rock { background-color: #c7b78b; }
+.ghost { background-color: #5269ac; }
+.dragon { background-color: #0a6af2; }
+.dark { background-color: #5a5366; }
+.steel { background-color: #5a8ea1; }
+.fairy { background-color: #ec8fe6; }
+.normal { background-color: #9099a1; }

@@ -1,0 +1,36 @@
+@if(details(); as d){
+<div class="card" [ngClass]="d.types[0].type.name">
+    <div class="card-header">
+        <span class="name">{{ d.name | titlecase }}</span>
+        <span class="hp">{{ d.stats[0].base_stat}} HP</span>
+    </div><!--card-reader-->
+
+
+    <div class="image-container">
+        <img [src]="d.sprites.other['official-artwork'].front_default" [alt]="d.name">
+    </div><!--image-container-->
+
+    <div class="types">
+        @for(t of d.types; track t.type.name){
+        <span class="type-badge">{{ t.type.name }}</span>
+        }
+    </div><!--types-->
+
+    <div class="stats">
+        <div class="stat-row">
+            <span>Ataque:</span> <strong>{{ d.stats[1].base_stat }}</strong>
+        </div><!--stat-row-->
+        <div class="stat-row">
+            <span>Defesa:</span> <strong>{{ d.stats[2].base_stat }}</strong>
+        </div><!--stat-row-->
+    </div><!--stats-->
+
+
+    <div class="abilities">
+        <p>Habilidade: {{ d.abilities[0].ability.name }}</p>
+
+    </div><!--abilities-->
+</div><!--card-->
+}@else {
+    <div class="loader">Carregando carta...</div><!--loader-->
+}
