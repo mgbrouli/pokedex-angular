@@ -1,24 +1,27 @@
-<h1>Minha pokedex Angular</h1>
+<header>
 
-<div class="filter-container">
-  <label for="region">Escolha a Região: </label>
-  <select id="region" (change)="selecionarRegiao($event)">
-    <option value="151,0">Kanto (Geração 1)</option>
-    <option value="100,151">Johto (Geração 2)</option>
-    <option value="135,251">Hoenn (Geração 3)</option>
-    <option value="107,386">Sinnoh (Geração 4)</option>
-    <option value="151,0">Todas (Primeiros 151)</option>
-  </select>
-</div>
+  <h1>Minha pokedex Angular</h1>
 
-<div class="search-container">
-  <input type="text" placeholder="Pesquisar Pokemon" (input)="updateSearch($event)">
-</div><!--search-container-->
+  <div class="filter-container">
+    <label for="region">Escolha a Região: </label>
+    <select id="region" (change)="selecionarRegiao($event)">
+      <option value="151,0">Kanto (Geração 1)</option>
+      <option value="100,151">Johto (Geração 2)</option>
+      <option value="135,251">Hoenn (Geração 3)</option>
+      <option value="107,386">Sinnoh (Geração 4)</option>
+      <option value="151,0">Todas (Primeiros 151)</option>
+    </select>
+  </div>
 
+  <div class="search-container">
+    <input type="text" placeholder="Pesquisar Pokemon" (input)="updateSearch($event)">
+  </div><!--search-container-->
+
+</header>
 <div class="pokedex-grid">
   @for(p of filteredPokemons(); track p.id){
-    <app-pokemon-card [pokemonBase]="p" />
-  } 
+  <app-pokemon-card [pokemonBase]="p" />
+  }
 </div><!--pokedex-grid-->
 
 <router-outlet />
